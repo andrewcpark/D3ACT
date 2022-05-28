@@ -1,13 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
-    <title>Hello World!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>D3ACT</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
   </head>
-  <body class="">
-    <div id="root" class="max-w-screen min-w-screen max-h-screen min-h-screen p-11"></div>
+  <body>
+    <h1 class="text-2xl font-bold text-dark-grey">D3ACT LOGO HERE</h1>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide relative"
+      data-bs-ride="carousel"
+    >
+      <div
+        class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+      >
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner relative w-full overflow-hidden">
+        <div class="carousel-item active relative float-left w-full">
+          <img
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+            class="block w-full"
+            alt="..."
+          />
+          <div class="carousel-caption hidden md:block absolute text-center">
+            <h5 class="text-xl">BarChart</h5>
+            <p>D3ACT Charts</p>
+          </div>
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <img
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+            class="block w-full"
+            alt="..."
+          />
+          <div class="carousel-caption hidden md:block absolute text-center">
+            <h5 class="text-xl">ScatterPlot</h5>
+            <p>D3ACT Charts</p>
+          </div>
+        </div>
+        <div class="carousel-item relative float-left w-full">
+          <img
+            src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+            class="block w-full"
+            alt="..."
+          />
+          <div class="carousel-caption hidden md:block absolute text-center">
+            <h5 class="text-xl">Radial Chart</h5>
+            <p>D3ACT Charts</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon inline-block bg-no-repeat"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon inline-block bg-no-repeat"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="h-64">
+      <div class="p-4 m-4 bg-grey-600">
+        <h1 class="text-2xl font-bold text-dark-grey">D3ACT</h1>
+        <div class="pt-5">
+          <!-- <button class="btn-dark-grey">My Tailwind Button</button> -->
+        </div>
+        <div class="pt-5">
+          <div class="bg-blue-900 text-center py-4 lg:px-4">
+            <div
+              class="p-2 bg-blue-800 items-center text-blue-100 leading-none lg:rounded-full flex lg:inline-flex"
+              role="alert"
+            >
+              <span
+                class="flex rounded-full bg-blue-500 uppercase font-bold px-2 py-1 text-xs mr-3"
+                >INFO</span
+              >
+              <span class="font-semibold mr-2 text-left flex-auto"
+                >Chart Info</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="pt-5">
+          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <!-- <img
+              src="/img/title.png"
+              alt="Tailwind CSS For Absolute Beginners"
+              class="w-full"
+            /> -->
+            <!-- <div class="content-start"> -->
+            <div class="px-6 py-4 order-first md:order-last">
+              <div class="font-bold text-xl mb-2">
+                BarChart
+              </div>
+              <p class="text-grey-700 text-base">
+               This is where we will display chart info for each graph
+              </p>
+            </div>
+            <div class="px-6 py-4 order-second">
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                >#barchart</span
+              >
+              <div class="px-6 py-4 order-first md:order-last">
+                <div class="font-bold text-xl mb-2">
+                  ScatterPlot
+                </div>
+                <p class="text-grey-700 text-base">
+                 This is where we will display chart info for each graph
+                </p>
+              </div>
+              </div>
+              <!-- <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                >#css</span
+              > -->
+              <span
+                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+                >#ScatterPlot</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
