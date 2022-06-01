@@ -64,10 +64,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new MiniCssExtractPlugin({
-      filename: "styles.css",
-      chunkFilename: "styles.css"
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: "styles.css",
+    //   chunkFilename: "styles.css"
+    // }),
   ],
   devServer: {
     static: path.resolve(__dirname, 'dist'),
