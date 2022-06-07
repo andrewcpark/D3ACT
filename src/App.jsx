@@ -14,6 +14,7 @@ import HistogramContainer from './components/Charts/Histogram/JSX/HistogramConta
 import LineChartContainer from './components/Charts/LineChart/LineChartContainer';
 import Homepage from './components/pages/Homepage';
 import CarouselComponent from './components/pages/TheCarousel';
+import StreamGraphContainer from './components/Charts/StreamGraph/StreamGraphContainer';
 
 
 export default () => {
@@ -30,6 +31,7 @@ export default () => {
               element={<ScatterPlotContainer />}
             />
             <Route path="histogram-chart" element={<HistogramContainer />} />
+            <Route path='stream-graph' element={<StreamGraphContainer />} />
           </Routes>
         </div>
       </HashRouter>

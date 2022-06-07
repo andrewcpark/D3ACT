@@ -4,8 +4,9 @@ const path = require('path');
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1400,
+    height: 1200,
+    title: 'D3ACT',
     webPreferences: {
       preload: path.resolve(__dirname, 'electron-scripts', 'preload.js'),
       devTools: true
@@ -51,6 +52,31 @@ app.whenReady().then(() => {
     
     // return promise
     return saveDialogPromise
+  });
+  
+  // This function shows the export Dialog and returns a promise to the renderer
+  // that resolves to the selected path .
+  ipcMain.handle('import-file', (event) => {
+    const importDialogPromise = dialog.showOpenDialog({
+      properties: ['openFile'],
+      buttonLabel: 'Import',
+      filters: [
+        { name: 'CSV', extensions: ['csv'] },
+      ]
+    })
+    .then(({ canceled, filePaths }) => {
+      if (canceled) {
+        console.log('Request Canceled')
+        return
+      } else {
+        console.log('File Selected:', filePaths)
+        return filePaths[0]
+      }
+    })
+    .catch(err => console.log('ERROR on "import-file" event: ', err))
+    
+    // return promise
+    return importDialogPromise
   });
   
   createWindow();

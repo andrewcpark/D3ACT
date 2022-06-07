@@ -75,6 +75,17 @@ function ChartCards() {
         <div className="max-w-sm rounded-md overflow-hidden shadow-lg indent-2 glass text-white p-2">
           <div className="flex font-bold text-xl mb-2 items-center indent-10">
 						<i class="fa-solid fa-chart-gantt fa-xl"></i>
+            <Link to="stream-graph" className="p-2">
+              StreamGraph
+            </Link>
+          </div>
+          <p className="text-grey-700 text-base p-2">
+            This is where we will display chart info for each graph
+          </p>
+        </div>
+        <div className="max-w-sm rounded-md overflow-hidden shadow-lg indent-2 glass text-white p-2">
+          <div className="flex font-bold text-xl mb-2 items-center indent-10">
+						<i class="fa-solid fa-chart-gantt fa-xl"></i>
             Timeline Chart
           </div>
           <p className="text-grey-700 text-base p-2">
