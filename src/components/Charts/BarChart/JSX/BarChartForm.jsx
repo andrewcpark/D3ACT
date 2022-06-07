@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../../../ChartComponents/chartstyles.css';
+import Dropdown from '../../../../Dropdown/Dropdown'
 
 const BarChartForm = ({
   data,
@@ -50,13 +51,18 @@ const BarChartForm = ({
           >
             X Key: string
           </label>
-          <input
+          < Dropdown 
+          data={data} 
+
+          />
+          
+          {/* <input
             class="rounded shadow-md"
             id="set-XKey"
             type="text"
             placeholder="X Key"
             onChange={handleXKey}
-          />
+          /> */}
           {/* <p class="text-white text-xs italic">Please fill out this field.</p> */}
         </div>
 

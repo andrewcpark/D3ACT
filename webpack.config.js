@@ -59,18 +59,17 @@ module.exports = {
           }
         }
       },
-      
+
       {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
-    },
+        type: 'asset/resource'
+      },
       {
-        test: /\/src\/.+\.css$/i,
-        exclude: /node_modules/,
+        test: /\.css$/i,
         use: [
           'style-loader',
           'css-loader',
@@ -89,7 +88,7 @@ module.exports = {
       }
     ]
   },
-  
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
